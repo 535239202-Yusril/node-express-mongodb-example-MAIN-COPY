@@ -133,7 +133,6 @@ async function createUser(request, response, next) {
     const email = request.body.email;
     const password = request.body.password;
 
-    // Check if email is already taken
     const emailTaken = await usersService.isEmailTaken(email);
     if (emailTaken) {
       throw errorResponder(errorTypes.CONFLICT, 'Email already taken');

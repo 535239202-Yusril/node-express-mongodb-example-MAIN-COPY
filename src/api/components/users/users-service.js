@@ -119,8 +119,8 @@ module.exports = {
 
 /**
  * Check if an email already exists
- * @param {string} email - Email to check
- * @returns {Promise<boolean>} - True if email exists, false otherwise
+ * @param {string} email
+ * @returns {Promise<boolean>}
  */
 async function isEmailTaken(email) {
   return await usersRepository.emailExists(email);
@@ -132,7 +132,7 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-  isEmailTaken, // Add this line to export the isEmailTaken function
+  isEmailTaken,
 };
 
 //TUGAS 3
